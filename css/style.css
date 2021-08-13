@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General style */
+.pd-y{
+    padding: 60px 0;
+}
+.heading-section{
+    text-align: center;
+}
+span.line{
+    background-color: #239B56;
+    width: 120px;
+    height: 4px;
+    display: block;
+    margin: auto;
+}
+span.line2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: -7px;
+}
+/* Header */
+.header-content{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    transition: .5s ease;
+    background-color: rgba(46, 204, 113 , .5); 
+    height: 70px;
+}
+.navgation a{
+    padding: .4rem 1rem;
+    color: #fff;
+    display: inline-block;
+    margin-left: 1rem;
+    transition: .5s all;
+}
+a.active,.navgation a:hover{
+    text-decoration: none;
+    background-color: #fff;
+    color: #239B56;
+    border-radius: 4px;
+}
+a:hover{
+    text-decoration: none;
+}
+.logo .brand{
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Pacifico', cursive;
+}
+.brand:hover{
+text-decoration: none;
+}
+header #icon-bar{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.close i{
+    color: #2ba35f;
+    background-color: #fff;
+    padding: .3rem;
+    margin: 1rem;
+}
+.icon{
+    display: none;
+}
+@media (max-width:868px){
+    .navgation{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0 , .8);
+       display: block;
+       transition: all 0.3s;
+    }
+    .navgation.active{
+        left: 0%;
+    }
+    .navgation a{
+        display: block;
+        width: 90px;
+        margin:1.5rem auto;
+        text-align: center;
+        font-size: 20px;
+    }
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+    .about-meDes h3{
+        margin: 24px 0;
+    }
+}
+/* Home | Main */
+.home{
+    background-image: url(../images/header/background.jpg);
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+}
+.home-layer{
+    height: 100vh;
+    width: 100%;
+    /* background-color: rgba(0, 0, 0, .9); */
+    background: #000;
+}
+.home-container{
+   display: flex;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+}
+h2.my-name{
+    letter-spacing: 1px;
+    padding: 1rem 0;
+}
+h3.my-job{
+    color: #28B463;
+}
+.btn-contact{
+    display: block;
+    color: #fff;
+    background-color: #239B56;
+    width: 100px;
+    height: 40px;
+    margin: 1.5rem auto;
+    line-height: 40px;
+    border-radius:  5px;
+    transition: all .5s;
+    border: 1px solid #239B56;
+}
+.btn-contact:hover{
+    text-decoration: none;
+    border-color: #fff;
+    background: none;
+    color: #fff;
+}
+.medaia-icon a span{
+    display: inline-block;
+    color: #fff;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    margin: .5rem;
+    border: 1px solid #fff;
+}
+.personal-imge{
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border: 1px solid #28B463;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #2ba35f,-1px -1px 5px #2ba35f;
+}
+.personal-imge img{
+    width: 100%;
+    border-radius: 50%;
+    padding: .3rem;
+}
+/* About Me section */
+.about-imge{
+    width: 80%;
+    border-radius: 10px;
+    
+}
+.about-imge img{
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  display: block;
+  border-radius: 10px;
+  height: 350px;
+}
+.about-meDes{
+    width: 90%;
+    line-height: 1.9;
+    margin:8px 0;
+}
+.btn-more{
+    padding: 7px 17px;
+    border: none;
+    border-radius: 5px;
+    background-color: #239B56;
+    color: #fff;
+    margin: 15px 0;
+}
+/* section my skills */
+.skills-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills{
+    width: 100%;
+    max-width: 50%;
+}
+.skill-name{
+    font-size: 17px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.skill-bar{
+    background:#CCD1D1  ;
+    height: 20px;
+    border-radius: 88px;
+}
+.skill-per{
+    height: 20px;
+    background-color: #2ba35f;
+    border-radius: 88px;
+    width: 0;
+    position: relative;
+    transition: 1s linear;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #2E4053 ;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translatex(50%);
+}
+/* section my works */
+.work-imge{
+border: 1px solid #145A32;
+border-radius: 5px;
+margin: 1rem 0;
+}
+.work-imge a img{
+width: 100%;
+border-radius: 5px;
+padding: 2px;
+display: block;
+margin: auto;
+height: 220px;
+}
+/* Contact me */
+.contact-card{
+    text-align: center;
+    box-shadow: 3px 3px 10px #B2BABB ;
+    padding: .5rem 0;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+.contact-icon{
+    display: block;
+    font-size: 40px;
+    color: #1D8348  ;
+    margin: 1rem 0;
+}
+/* form contact me */
+section.form{
+    background-color: #eee;
+}
+form {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+}
+@media (max-width: 500px){
+   form{
+       width: 90%;
+   } 
+   form input, textarea, button{
+       width: 100%;
+   }
+}
+form input, textarea{
+    width: 80%;
+    margin: 1rem 0;
+    border: 1px solid #B2BABB;
+    padding: .5rem;
+    border-radius: 5px;
+}
+section.form form button{
+    border: none;
+    border-radius: 5px;
+    background-color: #239B56;
+    color : #ffff;
+    width: 80%;
+    padding: 1rem 0;
+}
+footer{
+    background-color: #000;
+    text-align: center;
+    padding: 1rem;
+}
+footer p{
+    color: #fff;
+}
+/* Education  */
+.education-card{
+    display: flex;
+   justify-content: center;
+}
+.education-card .year{
+    margin-right: 1rem;
+}
+.education,.my-work{
+    background-color: #eee;
+}
+.edc-icon{
+    display: block;
+    color: #fff;
+    background-color: #1D8348;
+    text-align: center;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 10px 0;
+}
+.div-educ-icon{
+    margin:1rem 0;
+    text-align: center;
+}
+.btn-all{
+    color: #fff;
+    background-color: #1D8348;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    padding: .5rem .3rem;
+    margin:auto;
+    text-align: center;
+    display: block;
+}
+.last-works{
+    display: flex;
+    justify-content: center;
+}
